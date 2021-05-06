@@ -1,9 +1,10 @@
 import { objectOf, string, bool, shape } from "prop-types";
 import React from "react";
 import styled from "styled-components";
-import { colors, typography } from "../../tokens";
+import { colors, typography, borderRadius, spacing } from "../../tokens";
 import Button from "../Button";
 import Icon from "../Icon";
+import {spacingBaseBottom} from "../../tokens/dist/spacing";
 
 /* ProductItem
  *
@@ -30,8 +31,8 @@ const StyledProductContainer = styled.div`
   flex-direction: column;
 `;
 const StyledContainerWithImage = styled.div`
-  border-radius: ${(p) => p.isLarge ? "32px" : "24px"};
-  margin-bottom: ${(p) => p.isLarge ? "24px" : "16px"};
+  border-radius: ${(p) => p.isLarge ? borderRadius.radii32Radius : "24px"};
+  margin-bottom: ${(p) => p.isLarge ? spacing.spacing2XlBottom : spacing.spacingLgBottom};
   position: relative;
 `;
 const StyledButtonWrapper = styled.div`
@@ -40,7 +41,7 @@ const StyledButtonWrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 1;
-  margin: 24px;
+  margin: ${spacing.spacing2XlTop};
 `;
 const StyledImg = styled.img`
   max-width: 100%;
@@ -48,18 +49,20 @@ const StyledImg = styled.img`
 `;
 const StyledP = styled.p`
   display: ${(p) => p.isLarge ? "block" : "none"};
-  margin-bottom: 8px;
+  margin-bottom: ${spacing.spacingBaseBottom};
   opacity: 0.6;
 `;
 const Styledh1 = styled.h1`
   font-size: ${(p) => p.isLarge ? typography.headline1FontSize : typography.headline4FontSize};
   line-height: ${(p) => p.isLarge ? typography.headline1LineHeight : typography.headline4LineHeight};
-  margin-bottom: ${(p) => p.isLarge ? "16px" : "8px"};
+  margin-bottom: ${(p) => p.isLarge ? spacing.spacingLgBottom : spacingBaseBottom};
+  font-family: ${typography.paragraph3FontFamily};
 `;
 const Styledh2 = styled.h2`
   font-size: ${(p) => p.isLarge ? typography.headline2FontSize : typography.headline6FontSize};
   line-height: ${(p) => p.isLarge ? typography.headline2LineHeight : typography.headline6LineHeight};
   color: ${colors.primary500};
+  font-family: ${typography.paragraph3FontFamily};
 `;
 
 

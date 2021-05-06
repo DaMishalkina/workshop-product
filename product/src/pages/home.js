@@ -4,7 +4,8 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon, colors, Avatar, Title, ProductItem } from "design-system";
+import { Button, Icon, Avatar, Title, ProductItem } from "design-system";
+import { colors } from "design-system/src/tokens";
 import { Link } from "react-router-dom";
 
 const data = require("../data/data.js");
@@ -16,7 +17,7 @@ const Home = () => {
         <StyledDiv2>
           <Avatar src={data.user.avatar} />
           <Button isOutline>
-            <Icon name="menu" />
+            <Icon name="menu" color={colors.onBackground500}/>
           </Button>
         </StyledDiv2>
         <Styledh1>Store</Styledh1>

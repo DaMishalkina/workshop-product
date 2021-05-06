@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon, colors, ProductItem, BreadCrumb, BottomSwipe } from "design-system";
+import { Button, ProductItem, BreadCrumb, BottomSwipe } from "design-system";
 import { Link } from "react-router-dom";
 
 const data = require("../data/data.js");
