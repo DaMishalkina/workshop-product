@@ -54,6 +54,16 @@ StyleDictionary.registerFilter({
   },
 });
 
+/* Basic filter to separate radii tokens. */
+StyleDictionary.registerFilter({
+  name: "isRadii",
+  matcher: function (prop) {
+    return (
+        prop.path[0] === "radii"
+    );
+  },
+});
+
 module.exports = {
   source: ["./src/tokens/design-tokens.json"],
   platforms: {
@@ -82,6 +92,12 @@ module.exports = {
           destination: "spacing.js",
           format: "javascript/es6",
           filter: "isSpacing",
+        },
+        /* Filter and extract border-radius tokens*/
+        {
+          destination: "borderRadius.js",
+          format: "javascript/es6",
+          filter: "isRadii",
         },
       ],
     },

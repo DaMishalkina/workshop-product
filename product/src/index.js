@@ -12,6 +12,7 @@ import Details from "./pages/details";
 import Cart from "./pages/cart";
 import Checkout from "./pages/checkout";
 import { GlobalStyle } from "design-system";
+import { colors } from  "design-system/src/tokens";
 
 const StyledContainer = styled.div`
   width: 375px;
@@ -19,6 +20,7 @@ const StyledContainer = styled.div`
   background: #fff;
   min-height: 800px;
   position: relative;
+  background: ${colors.background500};
 `;
 
 /*

@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../Button";
-import { colors, typography, spacing } from "../../tokens";
+import { colors, typography, spacing, borderRadius } from "../../tokens";
 
 /* BottomSwipe
  *
@@ -43,11 +43,10 @@ const StyledDiv1 = styled.div`
   width: 82px;
 `;
 
-const StyledP = styled.p`
+const StyledP = styled.div`
   color: ${colors.onBackground500};
   font-weight: ${typography.headline4FontWeight};
   font-size: ${typography.headline4FontSize};
-  
-  
+  font-family: ${typography.paragraph3FontFamily};
 `;
 export default BottomSwipe;

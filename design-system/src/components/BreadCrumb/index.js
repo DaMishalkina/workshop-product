@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../Button";
 import Icon from "../Icon";
-import { typography } from "../../tokens";
+import { typography, colors, spacing } from "../../tokens";
 import {Link} from "react-router-dom";
 
 /* BreadCrumb
@@ -13,7 +13,7 @@ import {Link} from "react-router-dom";
 const BreadCrumb = ({href, name}) => {
   return <StyledBreadCrumb>
       <Button isOutline href={href}>
-        <Icon name="arrowBack" />
+        <Icon name="arrowBack" color={colors.onBackground500}/>
       </Button>
       <StyledDiv3>
         <StyledH4>{name}</StyledH4>
@@ -32,12 +32,13 @@ const StyledDiv3 = styled.div`
   flex-grow: 2;
   display: flex;
   align-items: center;
-  margin-left: 24px;
+  margin-left: ${spacing.spacing2XlLeft};
 `;
 
 const StyledH4 = styled.div`
   font-size: ${typography.headline4FontSize};
   font-weight: ${typography.headline4FontWeight};
+  font-family: ${typography.paragraph3FontFamily};
 `;
 
 export default BreadCrumb;

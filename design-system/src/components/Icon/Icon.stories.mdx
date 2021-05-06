@@ -12,7 +12,7 @@ SVG icons with customizable color and size, mainly to be used inside the buttons
 <Preview>
   <Story name="All">
     {Object.keys(icons).map((icon) => (
-      <Icon key={icon} name={icon} style={{ padding: "1em" }} />
+      <Icon key={icon} name={icon} style={{ padding: "1em" }} color={themeColors.onBackground500} />
     ))}
   </Story>
   <Story
@@ -20,7 +20,7 @@ SVG icons with customizable color and size, mainly to be used inside the buttons
     argTypes={{
       name: { control: { type: "select", options: Object.keys(icons) } },
     }}
-    args={{ name: "heart", width: 24, height: 24 }}
+    args={{ name: "heart", width: 24, height: 24, color: themeColors.onBackground500 }}
   >
     {(args) => <Icon {...args} />}
   </Story>
@@ -30,10 +30,10 @@ SVG icons with customizable color and size, mainly to be used inside the buttons
       name: { control: { type: "select", options: Object.keys(icons) } },
       color: { control: { type: "select", options: Object.keys(themeColors) } },
     }}
-    args={{ name: "heart", color: "primaryPurple100" }}
+    args={{ name: "heart", color: themeColors.onBackground500 }}
   >
     {({ name, color, ...args }) => {
-      const colorValue = themeColors[color];
+      const colorValue = themeColors.onBackground500;
       return <Icon name={name} color={colorValue} />;
     }}
   </Story>
