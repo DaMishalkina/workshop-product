@@ -1,0 +1,31 @@
+import { Meta, Preview, Story } from "@storybook/addon-docs/blocks";
+import { config, withDesign } from "storybook-addon-designs";
+import Title from ".";
+
+<Meta title="Components/Title" />
+
+## BreadCrumb
+
+TODO: add component description
+
+<Preview>
+    <Story
+        name="Default"
+        parameters={{
+            // Configuration for design plugin, which allows to display linked Figma frame
+            design: config({
+                type: "figma",
+                // replace this url with your own design file to link:
+                url:
+                    "https://www.figma.com/file/C3jfDdLSEM2scXfGZwk1ON/Workshop-starter-template?node-id=113%3A3201",
+            }),
+            viewport: {
+                defaultViewport: "mobile1",
+            },
+        }}
+        // Props values for the story
+        args={{ label: "All product",}}
+    >
+        {(args) => <Title {...args} />}
+    </Story>
+</Preview>
