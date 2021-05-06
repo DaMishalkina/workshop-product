@@ -1,7 +1,7 @@
 
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../..";
+import { colors, spacing } from "../..";
 
 /* Address
  *
@@ -32,7 +32,7 @@ const StyledAddressWrapper = styled.div`
 const StyledAddressHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: ${spacing.spacingLgBottom};
   align-items: baseline;
 `;
 

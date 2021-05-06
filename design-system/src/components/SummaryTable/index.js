@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { typography as t } from "tokens";
+import { typography as t, colors, spacing } from "../..";
 
 /* SummaryTable
  *
@@ -38,20 +38,20 @@ const SummaryTable = ({ items, total }) => {
 const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
-  row-gap: 16px;
-  margin-bottom: 32px;
+  row-gap: ${spacing.spacingLgTop};
+  margin-bottom: ${spacing.spacing3XlTop};
 `;
 
 const StyledBorder = styled.div`
   width: 100%;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
-  margin: 32px 0;
+  background-color: ${colors.onSurface300};
+  margin: ${spacing.spacing3XlTop} 0;
 `;
 
 const StyledItemName = styled.p`
-  font-size: 18px;
-  line-height: 28px;
+  font-size: ${t.paragraph1FontSize};
+  line-height: ${t.paragraph1LineHeight};
 `;
 
 const StyledHeading = styled.h2`

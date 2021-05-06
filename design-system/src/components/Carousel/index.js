@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-import { colors } from "tokens";
+import { colors, spacing } from "../../tokens";
 
 /* Carousel
  *
@@ -25,7 +25,7 @@ const Carousel = ({ images, ...props }) => {
 
 export const StyledCarousel = styled.div`
   > .awssld {
-    --control-bullet-color: ${colors.onBackground500};
+    --control-bullet-color: ${colors.primary200};
     --control-bullet-active-color: ${colors.onBackground500};
     --content-background-color: transparent;
     --loader-bar-color: #ffffff;
@@ -48,8 +48,7 @@ export const StyledCarousel = styled.div`
     button {
       width: 8px;
       height: 8px;
-      margin: 0 4px;
-      opacity: 0.6;
+      margin: 0 ${spacing.spacingSmLeft};
       border-radius: 50%;
     }
     & > .awssld__bullets--active {
