@@ -13,16 +13,12 @@ const Delivery = (props) => {
       <StyledDeliveryHeader>
         <h2>Delivery</h2>
       </StyledDeliveryHeader>
-      <p>Tarja Grönholm</p>
+      <p>{props.customerName}</p>
       <StyledDeliveryRow>
         <Select
-          options={[
-            { title: "DHL Express", value: "dhl" },
-            { title: "Fedex", value: "fedex" },
-            { title: "Pick up at store", value: "pickup" },
-          ]}
+          options={props.deliveryOptions}
         />
-        <p>€00.00</p>
+        <p>{props.price}</p>
       </StyledDeliveryRow>
     </StyledDelivery>
   );

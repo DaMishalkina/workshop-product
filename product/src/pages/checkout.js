@@ -4,7 +4,7 @@
  */
 import React from "react";
 import styled from "styled-components";
-import { Button, Icon, Carousel, Select, colors } from "design-system";
+import { Button, Icon, Carousel, colors, Address, Delivery, Total } from "design-system";
 import { Link } from "react-router-dom";
 
 const card = "/images/card.svg";
@@ -13,7 +13,7 @@ const cardPink = "/images/cardPink.svg";
 
 const StyledDiv1 = styled.div`
   padding: 64px 40px 40px 40px;
-  background-color: ${colors.primaryOrange10};
+  background-color: ${colors.primary100};
 `;
 
 const StyledDiv2 = styled.div`
@@ -36,31 +36,12 @@ const Styledh2 = styled.h2`
 const StyledDiv4 = styled.div`
   padding: 40px;
 `;
-const StyledDiv5 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  align-items: baseline;
-`;
-
-const StyledLink = styled.a`
-  color: ${colors.primaryOrange100};
-  font-size: 18px;
-`;
 
 const StyledBorder = styled.div`
   width: 100%;
   height: 1px;
-  background-color: ${colors.secondaryBlack10};
+  background-color: ${colors.onBackground500};
   margin-top: 8px;
-  margin-bottom: 32px;
-`;
-
-const StyledDiv6 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 32px;
   margin-bottom: 32px;
 `;
 
@@ -91,37 +72,23 @@ const Checkout = () => {
         />
       </StyledDiv1>
       <StyledDiv4>
-        <StyledDiv5>
-          <h2>Address</h2>
-          <StyledLink>Change</StyledLink>
-        </StyledDiv5>
-        <p>
-          Norra Larsmovägen 70, KUOPIO
-          <br />
-          70260
-          <br />
-          Finland
-        </p>
+        <Address
+          postcode={195222}
+          country="Finland"
+          street="Norra Larsmovägen 70, KUOPIO"
+        />
         <StyledBorder />
-        <StyledDiv5>
-          <h2>Delivery</h2>
-        </StyledDiv5>
-        <p>Tarja A Grönholm</p>
-        <StyledDiv6>
-          <Select
-            options={[
-              { title: "DHL Express", value: "dhl" },
-              { title: "Fedex", value: "fedex" },
-              { title: "Pick up at store", value: "pickup" },
-            ]}
-          />
-          <p>€00.00</p>
-        </StyledDiv6>
+        <Delivery
+          price="€00.00"
+          customerName="Customer name"
+          deliveryOptions={[
+            { title: "DHL Express", value: "dhl" },
+            { title: "Fedex", value: "fedex" },
+            { title: "Pick up at store", value: "pickup" },
+          ]}
+        />
         <StyledBorder />
-        <StyledDiv6>
-          <h2>Total</h2>
-          <h2>€95.00</h2>
-        </StyledDiv6>
+        <Total total="€105.00" />
         <Link to="/" style={{ textDecoration: "none" }}>
           <Button isStretched>Place Order</Button>
         </Link>

@@ -28,6 +28,14 @@ Delivery shows a select, in which user can choose delivery company and see the d
       })
     }}
   >
-    <Delivery />
+    <Delivery
+    	price="€00.00"
+      customerName="Customer name"
+              deliveryOptions={[
+                { title: "DHL Express", value: "dhl" },
+                { title: "Fedex", value: "fedex" },
+                { title: "Pick up at store", value: "pickup" },
+              ]}
+    />
   </Story>
 </Preview>

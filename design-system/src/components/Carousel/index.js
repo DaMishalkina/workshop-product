@@ -25,8 +25,8 @@ const Carousel = ({ images, ...props }) => {
 
 export const StyledCarousel = styled.div`
   > .awssld {
-    --control-bullet-color: ${colors.secondaryBlack20};
-    --control-bullet-active-color: ${colors.secondaryBlack100};
+    --control-bullet-color: ${colors.onBackground500};
+    --control-bullet-active-color: ${colors.onBackground500};
     --content-background-color: transparent;
     --loader-bar-color: #ffffff;
     --loader-bar-height: 1px;
