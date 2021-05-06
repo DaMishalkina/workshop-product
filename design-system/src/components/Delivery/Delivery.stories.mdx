@@ -1,0 +1,33 @@
+
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks';
+import { config, withDesign } from "storybook-addon-designs";
+
+import Delivery from ".";
+
+<Meta
+	title="Components/Delivery"
+	decorators={[withDesign]}
+	parameters={{
+    viewport: {
+      defaultViewport: "mobile1",
+    },
+  }}
+/>
+
+## Delivery
+
+Delivery shows a select, in which user can choose delivery company and see the delivery's price
+
+<Preview>
+  <Story
+  	name="Default"
+  	parameters={{
+      design: config({
+      	type: "figma",
+      	url: "https://www.figma.com/file/C3jfDdLSEM2scXfGZwk1ON/Workshop-starter-template?node-id=405%3A372",
+      })
+    }}
+  >
+    <Delivery />
+  </Story>
+</Preview>
