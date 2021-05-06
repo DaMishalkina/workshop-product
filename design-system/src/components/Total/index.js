@@ -10,7 +10,7 @@ const Total = (props) => {
   return (
     <StyledTotal {...props}>
       <h2>Total</h2>
-      <h2>€95.00</h2>
+      <h2>{props.total}</h2>
     </StyledTotal>
   )
 };

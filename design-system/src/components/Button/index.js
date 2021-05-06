@@ -34,7 +34,7 @@ const StyledButton = styled.button`
   color: ${(p) =>
     p.isOutline
       ? p.isActive
-        ? colors.onBackground500
+        ? colors.primary500
         : colors.onSurface100
       : colors.onSurface50};
   font-size: 14px;

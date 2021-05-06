@@ -15,11 +15,11 @@ const Address = (props) => {
         <StyledLink>Change</StyledLink>
       </StyledAddressHeader>
       <p>
-        Norra Larsmovägen 70, KUOPIO
+        {props.street}
         <br />
-        70260
+        {props.postcode}
         <br />
-        Finland
+        {props.country}
       </p>
     </StyledAddressWrapper>
   );
@@ -37,7 +37,7 @@ const StyledAddressHeader = styled.div`
 `;
 
 const StyledLink = styled.a`
-  color: ${colors.primaryOrange100};
+  color: ${colors.primary500};
   font-size: 18px;
 `;
 
