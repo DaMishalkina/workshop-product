@@ -29,7 +29,7 @@ const StyledButton = styled.button`
   border-radius: 1rem;
   padding: ${(p) => (p.label ? "16px" : "12px")};
   background-color: ${(p) =>
-    p.isOutline ? (p.isActive ? colors.background500 : "transparent") : p.color};
+    p.isOutline ? (p.isActive ? colors.background500 : "transparent") : p.isTransparent? "transparent" : p.color};
   opacity: ${(p) => (p.disabled ? 0.6 : 1)};
   color: ${(p) =>
     p.isOutline

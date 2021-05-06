@@ -16,3 +16,4 @@ export { default as Icon } from "./components/Icon";
 export { default as ProductItem } from "./components/ProductItem";
 export { default as Select } from "./components/Select";
 export { default as SummaryTable } from "./components/SummaryTable";
+export { default as Title } from "./components/Title";
