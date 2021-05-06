@@ -1,6 +1,6 @@
 {
   "name": "design-system",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "main": "dist/design-system.js",
   "license": "MIT",
   "scripts": {
