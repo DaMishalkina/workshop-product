@@ -30,6 +30,7 @@ const Title = ({label}) => {
 export const StyledTitle = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 24px;
 `;
 const StyledDiv4 = styled.div`
