@@ -2,7 +2,7 @@ import { arrayOf, string, shape } from "prop-types";
 import React from "react";
 import styled from "styled-components";
 import Icon, { icons } from "../Icon";
-import { colors, typography } from "tokens";
+import { colors, typography, spacing } from "../../tokens";
 import {
   Listbox,
   ListboxInput,
@@ -66,13 +66,13 @@ Select.propTypes = {
 
 export const StyledSelect = styled(Listbox)`
   > [data-reach-listbox-button] {
-    padding: 8px 16px;
+    padding: ${spacing.spacingBaseTop} ${spacing.spacingLgRight};
     font-family: ${typography.paragraph1FontFamily};
-    line-height: 24px;
+    line-height: ${typography.headline6LineHeight};
     font-weight: bold;
-    border-color: ${colors.secondaryBlack20};
+    border-color: ${colors.onSurface100};
     border-radius: 12px;
-    color: ${colors.secondaryBlack100};
+    color: ${colors.onBackground500};
     position: relative;
     outline: none;
     align-items: baseline;
@@ -83,6 +83,11 @@ export const StyledSelect = styled(Listbox)`
     right: 0.75rem;
     pointer-events: none;
     display: block;
+  }
+  svg {
+    path {
+      fill: ${colors.onBackground500};
+    }
   }
 `;
 

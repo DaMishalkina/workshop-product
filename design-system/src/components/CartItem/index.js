@@ -1,6 +1,7 @@
 
 import React from "react";
 import styled from "styled-components";
+import { spacing, typography } from "../../tokens";
 
 /* CartItem
  *
@@ -35,7 +36,7 @@ const StyledDescriptionWrapper = styled.div`
   flex-wrap: wrap;
   flex-grow: 1;
   align-items: center;
-  margin-left: 16px;
+  margin-left: ${spacing.spacingLgLeft};
   align-content: flex-start;
 `;
 
@@ -48,7 +49,7 @@ const StyledName = styled.h6`
 `;
 
 const StyledPrice = styled.h6`
-  font-weight: 700;
+  font-weight: ${typography.paragraph1BoldFontWeight};
 `;
 
 const StyledDescription = styled.p`

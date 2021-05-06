@@ -2,6 +2,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { spacing } from "../../tokens";
+
 /* Total
  *
  * Total shows total price for the cart
@@ -19,8 +21,8 @@ const StyledTotal = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: ${spacing.spacing3XlTop};
+  margin-bottom: ${spacing.spacing3XlBottom};
 `;
 
 export default Total;

@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Select } from "../..";
+import { spacing } from "../../tokens";
 
 /* Delivery
  *
@@ -31,7 +32,7 @@ export const StyledDelivery = styled.div`
 const StyledDeliveryHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: ${spacing.spacingLgBottom};
   align-items: baseline;
 `;
 
@@ -39,8 +40,8 @@ const StyledDeliveryRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: ${spacing.spacing3XlTop};
+  margin-bottom: ${spacing.spacing3XlBottom};
 `;
 
 export default Delivery;
