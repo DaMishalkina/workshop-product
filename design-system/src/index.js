@@ -8,8 +8,11 @@ export { default as GlobalStyle } from "./global.js";
 export { colors, typography, spacing } from "./tokens";
 
 
+export { default as Avatar } from "./components/Avatar";
+export { default as BreadCrumb } from "./components/BreadCrumb";
 export { default as Button } from "./components/Button";
 export { default as Carousel } from "./components/Carousel";
 export { default as Icon } from "./components/Icon";
+export { default as ProductItem } from "./components/ProductItem";
 export { default as Select } from "./components/Select";
 export { default as SummaryTable } from "./components/SummaryTable";

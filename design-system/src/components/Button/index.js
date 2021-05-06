@@ -18,8 +18,8 @@ const StyledButton = styled.button`
   border-color: ${(p) =>
     p.isOutline
       ? p.isActive
-        ? colors.pinkPink100
-        : colors.secondaryBlack20
+        ? colors.onSurface900
+        : colors.onSurface100
       : "transparent"};
   box-sizing: border-box;
   line-height: 24px;
@@ -29,14 +29,14 @@ const StyledButton = styled.button`
   border-radius: 1rem;
   padding: ${(p) => (p.label ? "16px" : "12px")};
   background-color: ${(p) =>
-    p.isOutline ? (p.isActive ? colors.pinkPink20 : "transparent") : p.color};
+    p.isOutline ? (p.isActive ? colors.background500 : "transparent") : p.color};
   opacity: ${(p) => (p.disabled ? 0.6 : 1)};
   color: ${(p) =>
     p.isOutline
       ? p.isActive
-        ? colors.pinkPink80
-        : colors.secondaryBlack100
-      : colors.secondaryWhite100};
+        ? colors.onBackground500
+        : colors.onSurface100
+      : colors.onSurface50};
   font-size: 14px;
   font-weight: 700;
   width: ${(p) => (p.isStretched ? "100%" : null)};
@@ -67,7 +67,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  color: colors.primaryOrange100,
+  color: colors.primary500,
 };
 
 export default Button;
