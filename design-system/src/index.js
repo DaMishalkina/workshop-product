@@ -9,6 +9,7 @@ export { colors, typography, spacing } from "./tokens";
 
 
 export { default as Address } from "./components/Address";
+export { default as Avatar } from "./components/Avatar";
 export { default as BottomSwipe } from "./components/BottomSwipe";
 export { default as BreadCrumb } from "./components/BreadCrumb";
 export { default as Button } from "./components/Button";

@@ -40,7 +40,7 @@ const StyledDiv4 = styled.div`
 const StyledBorder = styled.div`
   width: 100%;
   height: 1px;
-  background-color: ${colors.onBackground500};
+  background-color: ${colors.onSurface300};
   margin-top: 8px;
   margin-bottom: 32px;
 `;

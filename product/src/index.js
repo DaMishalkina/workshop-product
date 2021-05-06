@@ -18,6 +18,7 @@ const StyledContainer = styled.div`
   margin: 0 auto;
   background: #fff;
   min-height: 800px;
+  position: relative;
 `;
 
 /*

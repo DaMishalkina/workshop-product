@@ -18,7 +18,7 @@ const StyledButton = styled.button`
   border-color: ${(p) =>
     p.isOutline
       ? p.isActive
-        ? colors.onSurface900
+        ? colors.onSurface100
         : colors.onSurface100
       : "transparent"};
   box-sizing: border-box;
@@ -34,16 +34,16 @@ const StyledButton = styled.button`
   color: ${(p) =>
     p.isOutline
       ? p.isActive
-        ? colors.primary500
+        ? colors.onBackground500
         : colors.onSurface100
-      : colors.onSurface50};
+      : colors.onBackground500};
   font-size: 14px;
   font-weight: 700;
   width: ${(p) => (p.isStretched ? "100%" : null)};
   ${(p) =>
     p.isActive &&
     `svg {
-      fill: ${colors.pinkPink100};
+      fill: ${colors.onBackground500};
         path {
           fill-opacity: 1;
         }

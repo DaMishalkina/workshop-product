@@ -1,5 +1,5 @@
 import { createGlobalStyle, css } from "styled-components";
-import { typography as t } from "./tokens";
+import { typography as t, colors } from "./tokens";
 const bodyStyles = css`
   overflow-y: auto;
   overflow-x: hidden;
@@ -8,6 +8,8 @@ const bodyStyles = css`
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
   -webkit-overflow-scrolling: touch;
+  background-color: ${colors.background500};
+  color: ${colors.onBackground500};
   font-family: ${t.paragraph3FontFamily};
   font-size: ${t.paragraph3FontSize};
   font-weight: ${t.paragraph3FontWeight};
@@ -91,7 +93,7 @@ const bodyStyles = css`
 // Allow design system consumers to access font settings but control how and
 // where they load the fon${t.
 export const fontUrl =
-  "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap";
+  "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap";
 
 const globalStyle = createGlobalStyle`
   body {
