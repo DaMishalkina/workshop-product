@@ -3,9 +3,9 @@
  * If you are adding new token category, import it here
  */
 
-import * as colors from "design-system/src/tokens/dist/colors";
-import * as typography from "design-system/src/tokens/dist/typography";
-import * as spacing from "design-system/src/tokens/dist/spacing";
-import * as borderRadius from "design-system/src/tokens/dist/borderRadius";
+import * as colors from "./dist/colors";
+import * as typography from "./dist/typography";
+import * as spacing from "./dist/spacing";
+import * as borderRadius from "./dist/borderRadius";
 
 export { colors, typography, spacing, borderRadius };
